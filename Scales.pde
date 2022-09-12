@@ -3,9 +3,12 @@ void setup() {
   noLoop(); //stops the draw() function from repeating
 }
 void draw() {
-  //your code here
+  scale(100, 100);
 }
 void scale(int x, int y) {
-  //your code here
+  beginShape();
+  vertex(x, y + 100);
+  vertex(x + 100, y + 100);
+   vertex(x + 120, y);
+  endShape();
 }
-
