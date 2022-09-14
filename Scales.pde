@@ -1,7 +1,5 @@
 void setup() {
   size(500, 500);  //feel free to change the size
-  randomColor();
-  background(r, g, b);
   noLoop(); //stops the draw() function from repeating
 }
 
@@ -10,7 +8,7 @@ int g = 0; //controls green values for color.
 int b = 0; //controls blue values for color.
 boolean os = false; //controls the if the offset is true or false.
 
-void draw() {
+void draw() {//This draws the scale.
   for (int y = -30; y < 471; y+=50) {//y loop
     for (int x = 6; x < 507; x+=50) {//x loop
       if (os == true) {//offset true
@@ -28,7 +26,7 @@ void draw() {
     }
   }//y loop
 }
-void scale(int x, int y) {
+void scale(int x, int y) {//This creates the shape of my scale.
   fill(r, g, b);
   beginShape();
   curveVertex(x, y + 40);
@@ -43,22 +41,8 @@ void scale(int x, int y) {
   endShape();
 }
 
-void randomColor() {
+void randomColor() { //Makes a random color.
   r = ((int)(Math.random() * 256));  
   g = ((int)(Math.random() * 256));
   b = ((int)(Math.random() * 256));
 }
-
-/*
-  beginShape();
- curveVertex(x, y + 80);
- curveVertex(x, y + 80);
- curveVertex(x + 50, y + 110);
- curveVertex(x + 100, y + 80);
- curveVertex(x + 100, y + 80);
- vertex(x + 120, y);
- vertex(x + 50, y - 50);
- vertex(x - 20, y);
- vertex(x, y + 80);
- endShape();
- */
